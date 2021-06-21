@@ -15,5 +15,4 @@ def blog(request):
     return HttpResponse("BLOG")
 
 def contact(request):
-    message="HOLA"
-    return HttpResponse(message)
+    return HttpResponse("contact")
