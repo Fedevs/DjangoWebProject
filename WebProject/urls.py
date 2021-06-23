@@ -20,3 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('WebApp.urls'))
 ]
+
+#superUser, Fede 1234

@@ -21,19 +21,19 @@
       </div>
 
       <ul class="nav-list">
-        <li class="">
+        <li class="{% if request.path == '/' %}link-active{% endif %}">
           <a class="" href="{% url 'Home' %}">Home</a>
         </li>
-        <li class="">
+        <li class="{% if request.path == '/services/' %}link-active{% endif %}">
           <a class="" href="{% url 'Services' %}">Services</a>
         </li>
-        <li class="">
+        <li class="{% if request.path == '/shop/' %}link-active{% endif %}">
           <a class="" href="{% url 'Shop' %}">Shop</a>
         </li>
-        <li class="">
+        <li class="{% if request.path == '/contact/' %}link-active{% endif %}">
           <a class="" href="{% url 'Contact' %}">Contact</a>
         </li>
-        <li class="">
+        <li class="{% if request.path == '/blog/' %}link-active{% endif %}">
           <a class="" href="{% url 'Blog' %}">Blog</a>
         </li>
 
@@ -46,40 +46,12 @@
 
 
     <!-- Footer -->
-    <footer class="footer text-faded text-center py-5">
-      <div class="container">
-        <p class="m-0">
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	        <a href="#" class="link">
-	          <span class="fa-stack fa-lg">
-	            <i class="fa fa-circle fa-stack-2x"></i>
-	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-	          </span>
-	        </a>
-	    </p>
-        <p class="m-0 mbt">
-        	<a href="sample.html" class="link">Política de privacidad</a> ·
-        	<a href="sample.html" class="link">Aviso legal</a> ·
-        	<a href="sample.html" class="link">Cookies</a>
-		</p>
-        <p class="m-0 mbt1">&copy; Gestión de Pedidos 2020</p>
-      </div>
+    <footer class="footer">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
 	</footer>
-
-    <!-- Bootstrap -->
-    <script src="{% static 'WebApp/vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'WebApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
 
