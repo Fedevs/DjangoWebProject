@@ -33,7 +33,7 @@
         <li class="{% if request.path == '/contact/' %}link-active{% endif %}">
           <a class="" href="{% url 'Contact' %}">Contact</a>
         </li>
-        <li class="{% if request.path == '/blog/' %}link-active{% endif %}">
+        <li class="{% if request.path|slice:':6' == '/blog/' %}link-active{% endif %}">
           <a class="" href="{% url 'Blog' %}">Blog</a>
         </li>
 
