@@ -4,6 +4,3 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'WebApp/home.html')
-
-def shop(request):
-    return render(request, 'WebApp/shop.html')
