@@ -4,9 +4,23 @@
 
     {% block content %}
 
+    <div>
+      <div style="float: right;">
+        {% include 'cart/widget.html' %}
+      </div>
+    </div>
+
      {% for product in products %}
       <div>
-        {{product.name}}
+        <img src="{{product.image.url}}" alt="" width="200px" height="200px">
+        <div>
+          <p>{{product.name}}</p>
+          <p>{{product.price}}</p>
+        </div>
+
+        <div>
+          <a href="{% url 'cart:add' product.id %}">Add to cart</a>
+        </div>
       </div>
      {% endfor %}
     

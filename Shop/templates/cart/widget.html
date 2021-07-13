@@ -1,0 +1,32 @@
+<div>
+    <div>
+        <p>Shopping Cart</p>
+    </div>
+    <div>
+        <p>Product</p>
+        <p>Quantity</p>
+        <p>Total Product</p>
+    </div>
+    {% if request.session.cart.items %}
+        {% for key, value in request.session.cart.items %}
+        <div>
+            <p>{{value.name}}</p>
+            <p>{{value.quantity}}</p>
+            <div>
+                <a href="{% url 'cart:add' value.id_product %}">SUMAR</a>
+                <a href="{% url 'cart:subtract' value.id_product %}">RESTAR</a>
+            <p>{{value.price}}</p>
+
+            </div>
+        </div>
+        {% endfor %}
+        <div>
+            <p>Total: $ {{ cart_total }}</p>
+        </div>
+
+    {% else %}
+    <div>
+        <p>Nothing to buy...</p>
+    </div>
+    {% endif %}
+</div>
