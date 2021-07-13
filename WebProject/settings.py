@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Services',
     'Blog',
     'Contact',
+    'Shop',
 ]
 
 MIDDLEWARE = [
@@ -81,10 +82,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'djangoWebProject',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
+        'USER': 'yourDBUser',
+        'PASSWORD': 'yourDBPw',
         'HOST': 'localhost',
-        'DATABASE_PORT': '5432',
+        'DATABASE_PORT': 'yourDBPort',
     }
 }
 
